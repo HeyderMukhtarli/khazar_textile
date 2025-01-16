@@ -5,6 +5,7 @@ const translations = {
         download: "Download Catalogue",
         selectLanguage: "Select Language",
         languageOptions: ["English", "Azerbaijani", "Russian"],
+        hideSidebar: "Hide Sidebar",
     },
     AZ: {
         products: "Məhsullarımız",
@@ -12,6 +13,7 @@ const translations = {
         download: "Kataloqu Yükləyin",
         selectLanguage: "Dil Seçin",
         languageOptions: ["İngilis", "Azərbaycan", "Rus"],
+        hideSidebar: "Paneli Gizlət",
     },
     RU: {
         products: "Наши Продукты",
@@ -19,6 +21,7 @@ const translations = {
         download: "Скачать Каталог",
         selectLanguage: "Выберите Язык",
         languageOptions: ["Английский", "Азербайджанский", "Русский"],
+        hideSidebar: "Скрыть Панель",
     },
 };
 
@@ -33,11 +36,13 @@ function updateLanguage(languageCode) {
         download: document.querySelector(".btn-download"),
         selectLanguage: document.querySelector("#languageModalLabel"),
         languageOptions: document.querySelectorAll(".language-option"),
+        hideSidebar: document.querySelector("#hideSidebarButton"),
     };
 
     elementsToUpdate.products.innerHTML = `<i class="bi bi-box"></i> ${translations[languageCode].products}`;
     elementsToUpdate.about.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
     elementsToUpdate.download.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
+    elementsToUpdate.hideSidebar.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i> ${translations[languageCode].hideSidebar}`;
     elementsToUpdate.selectLanguage.textContent = translations[languageCode].selectLanguage;
 
     elementsToUpdate.languageOptions.forEach((option, index) => {

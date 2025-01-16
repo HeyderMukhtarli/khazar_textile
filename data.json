@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Flame Resistant High Visibility Shirt 100% C-7",
+        "description": "Fabric of FR High Vis Shirt is mercerized and designed to provide minimal shrinkage, maximum...",
+        "code": "236859",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ]
+    },
+    {
+        "name": "Another Shirt Example",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ]
+    },
+    {
+        "name": "Another Shirt Example",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ]
+    },
+    {
+        "name": "Another Shirt Example",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ]
+    }
+]
