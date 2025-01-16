@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color:#E9E9EB !important;
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
 }
 
 .navbar-custom {
-    background-color: #f5f5f5;
+    background-color: #E9E9EB;
     padding: 15px;
 }
 
