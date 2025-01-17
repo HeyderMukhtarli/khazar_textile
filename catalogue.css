@@ -27,9 +27,9 @@
         font-weight: 400;
         line-height: 100%;
 }
-.mb-32{
+.mb-20{
 
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 
 
 }
@@ -87,6 +87,9 @@ color: var(--Gray, #666);
     padding: 28px;
     border-radius: var(--radius-m, 24px);
         background: var(--White, #FFF);
+}
+.catalogue{
+    width: 100%;
 }
 .mb-8{
     margin-bottom: 8px;
@@ -207,10 +210,11 @@ border-radius: var(--radius-s, 18px);
     padding: 16px 20px;
     border-radius: var(--radius-s, 18px);
         background: var(--Alternative-White, #EFEFF0);
+        opacity: 1;
   }
 
-  /* Optional: To adjust the opacity */
-  .modal-backdrop.show{
-    background:  rgba(0, 0, 0, 0.10) !important;
-        backdrop-filter: blur(16px) !important;
+
+
+  .m-0{
+    margin: 0 !important;
   }
