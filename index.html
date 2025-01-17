@@ -14,8 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -55,7 +53,7 @@
         <div class="d-flex align-items-center gap-3 mt-3">
           <div class="contact-info d-flex gap-2">
             <a href="#" class="btn btn-outline-primary btn-download">
-              <i class="bi bi-download"></i> 
+              <i class="bi bi-download"></i>
             </a>
             <a href="tel:+994559149161" class="btn btn-outline-secondary btn-phone">
               <i class="bi bi-telephone"></i> +994 55 914 91 61
@@ -104,207 +102,240 @@
       </button>
     </div>
     <div class="d-flex justify-content-between align-items-start">
-    <div class="sidebar mr-3" id="sidebar">
-      <button class="hide-sidebar" id="hideSidebarButton">
-        <i class="fa-solid fa-arrow-left-long"></i>
-      </button>
+      <div class="sidebar mr-3" id="sidebar">
+        <button class="hide-sidebar" id="hideSidebarButton">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </button>
 
-      <div class="menu">
-        <div class="menu-item" data-target="head">
-          <span>Head</span>
-          <i class="arrow fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="submenu" id="head">
-          <div>Hats</div>
-          <div>Caps</div>
-          <div>Scarves</div>
-        </div>
+        <div class="menu">
+          <div class="menu-item" data-target="head">
+            <span>Head</span>
+            <i class="arrow fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="submenu" id="head">
+            <div>Hats</div>
+            <div>Caps</div>
+          </div>
 
-        <div class="menu-item" data-target="body">
-          <span>Body</span>
-          <i class="arrow fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="submenu" id="body">
-          <div>Shirts</div>
-          <div>Jackets</div>
-          <div>Coats</div>
-          <div>Blouses</div>
-        </div>
+          <div class="menu-item" data-target="body">
+            <span>Body</span>
+            <i class="arrow fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="submenu" id="body">
+            <div>Shirts</div>
+            <div>Jackets</div>
+            <div>Coats</div>
+            <div>Blouses</div>
+          </div>
 
-        <div class="menu-item" data-target="feet">
-          <span>Feet</span>
-          <i class="arrow fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="submenu" id="feet">
-          <div>Pants</div>
-          <div>Jeans</div>
-          <div>Socks</div>
-          <div>Footwear</div>
-        </div>
+          <div class="menu-item" data-target="feet">
+            <span>Feet</span>
+            <i class="arrow fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="submenu" id="feet">
+            <div>Pants</div>
+            <div>Jeans</div>
+            <div>Socks</div>
+            <div>Footwear</div>
+          </div>
 
-        <div class="menu-item" data-target="other">
-          <span>Other</span>
-          <i class="arrow fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="submenu" id="other">
-          <div>Accessories</div>
-          <div>Other Items</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="catalogue">
-      <div class="row g-2">
-        <div class="mb-32 d-flex justify-content-between align-items-center">
-          <p class="mb-0 title">Our Catalogue for Body</p>
-          <div class="search position-relative">
-            <input type="text" class="form-control pl-5 pr-5" placeholder="Search" id="searchInput">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-search position-absolute"
-              style="top: 50%; left: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-x position-absolute"
-              style="top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
-              <path
-                d="M4.293 4.293a1 1 0 0 1 1.414 0L8 6.586l2.293-2.293a1 1 0 1 1 1.414 1.414L9.414 8l2.293 2.293a1 1 0 1 1-1.414 1.414L8 9.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L6.586 8 4.293 5.707a1 1 0 0 1 0-1.414z" />
-            </svg>
+          <div class="menu-item" data-target="other">
+            <span>Other</span>
+            <i class="arrow fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="submenu" id="other">
+            <div>Accessories</div>
+            <div>Other Items</div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="catalogue">
+        <div class="row g-2" id="bodyCatalogue">
+          <div class="mb-32 d-flex justify-content-between align-items-center">
+            <p class="mb-0 title">Catalogue for Body</p>
+            <div class="search position-relative">
+              <input type="text" class="form-control pl-5 pr-5" placeholder="Search" id="searchInput">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-search position-absolute"
+                style="top: 50%; left: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-x position-absolute"
+                style="top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
+                <path
+                  d="M4.293 4.293a1 1 0 0 1 1.414 0L8 6.586l2.293-2.293a1 1 0 1 1 1.414 1.414L9.414 8l2.293 2.293a1 1 0 1 1-1.414 1.414L8 9.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L6.586 8 4.293 5.707a1 1 0 0 1 0-1.414z" />
+              </svg>
+            </div>
+          </div>
+          <div class="items-container d-flex flex-row flex-wrap"></div>
+        </div>
+        <div class="row g-2" id="headCatalogue">
+          <div class="mb-32 d-flex justify-content-between align-items-center">
+            <p class="mb-0 title mt-4">Catalogue for Head</p>
+          </div>
+          <div class="items-container d-flex flex-row flex-wrap"></div>
+        </div>
+        <div class="row g-2" id="feetCatalogue">
+          <div class="mb-32 d-flex justify-content-between align-items-center">
+            <p class="mb-0 title mt-4">Catalogue for Feet</p>
+          </div>
+          <div class="items-container d-flex flex-row flex-wrap"></div>
+        </div>
+        <div class="row g-2" id="otherCatalogue">
+          <div class="mb-32 d-flex justify-content-between align-items-center">
+            <p class="mb-0 title mt-4">Catalogue for Other</p>
+          </div>
+          <div class="items-container d-flex flex-row flex-wrap"></div>
+        </div>
+      </div>
     </div>
   </section>
-
-
   <footer class="footer-container container d-flex justify-content-center align-items-center">
     <p class="mb-0">© All Rights Reserved 2025</p>
   </footer>
-   <!-- modal -->
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <button type="button" class="btn-close close-modal">X</button>
-      <div class="modal-body d-flex justify-content-center align-items-center">
-        <img src="img/carousel.png" alt="Carousel Image">
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn-close close-modal">X</button>
+        <div class="modal-body d-flex justify-content-center align-items-center">
+          <img src="img/carousel.png" alt="Carousel Image">
+        </div>
       </div>
     </div>
   </div>
-</div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./lang.js"></script>
   <script>
-
-    document.querySelectorAll(".menu-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        const targetId = item.getAttribute("data-target");
-        const submenu = document.getElementById(targetId);
-        const arrow = item.querySelector(".arrow");
-
-        if (submenu.style.display === "block") {
-          submenu.style.display = "none";
-          arrow.classList.remove("rotate");
-        } else {
-          submenu.style.display = "block";
-          arrow.classList.add("rotate");
-        }
-      });
-    });
-
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-  const sidebar = document.getElementById("sidebar");
-  const hideSidebarButton = document.getElementById("hideSidebarButton");
-  const filterButton = document.getElementById("filterButton");
-  const body = document.body;
-
-  filterButton.addEventListener("click", () => {
-    sidebar.style.display = "block";
-    filterButton.classList.add("hidden");
-    body.classList.add("sidebar-open"); // Add the class to toggle column size
-  });
-
-  hideSidebarButton.addEventListener("click", () => {
-    sidebar.style.display = "none";
-    filterButton.classList.remove("hidden");
-    body.classList.remove("sidebar-open"); // Remove the class when sidebar is closed
-  });
-    document.addEventListener("click", (event) => {
-    if (event.target.closest(".magnifier")) {
-      const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter"));
-      modal.show();
-    }
-  });
-   document.querySelector(".close-modal").addEventListener("click", () => {
-    const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModalCenter"));
-    modal.hide();
-  });
-});
-
-
-
-
     fetch("./data.json")
       .then((response) => response.json())
       .then((data) => {
-        const container = document.querySelector(".row");
-        data.forEach((item) => {
-          const cardHTML = `
-    <div class="col-4">
-      <div class="card">
-        <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
-          <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
-          <button class="btn tabs share"><img src="img/share.png" alt=""></button>
-          <ol class="carousel-indicators">
-            ${item.carouselImages
-              .map(
-                (image, index) =>
-                  `<li data-target="#carousel-${item.code}" data-slide-to="${index}" class="${index === 0 ? "active" : ""
-                  }"></li>`
-              )
-              .join("")}
-          </ol>
+        const bodyContainer = document.querySelector("#bodyCatalogue");
+        const headContainer = document.querySelector("#headCatalogue");
+        const feetContainer = document.querySelector("#feetCatalogue");
+        const otherContainer = document.querySelector("#otherCatalogue");
 
-          <div class="carousel-inner">
-            ${item.carouselImages
-              .map(
-                (image, index) =>
-                  `<div class="carousel-item ${index === 0 ? "active" : ""}">
-                    <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
-                  </div>`
-              )
-              .join("")}
-          </div>
-        </div>
+        let activeFilter = null;
 
-        <p class="name mb-8">${item.name}</p>
-        <p class="description mb-24">${item.description}</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex justify-content-between align-items-center colors">
-            ${item.colors
-              .map((color) => `<div class="color ${color}"></div>`)
-              .join("")}
-          </div>
-          <div class="code-container">
-            <button class="btn code">
-              Code: ${item.code}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-          container.innerHTML += cardHTML;
+        const renderItems = (filteredData) => {
+          // Clear all containers first
+          document.querySelectorAll('.items-container').forEach(container => {
+            container.innerHTML = '';
+          });
+
+          // Render filtered data based on category
+          filteredData.forEach((item) => {
+            const cardHTML = `
+              <div class="col-4">
+                <div class="card">
+                  <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
+                    <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
+                    <button class="btn tabs share"><img src="img/share.png" alt=""></button>
+                    <ol class="carousel-indicators">
+                      ${item.carouselImages
+                .map(
+                  (image, index) =>
+                    `<li data-target="#carousel-${item.code}" data-slide-to="${index}" class="${index === 0 ? "active" : ""}"></li>`
+                )
+                .join("")}
+                    </ol>
+                    <div class="carousel-inner">
+                      ${item.carouselImages
+                .map(
+                  (image, index) =>
+                    `<div class="carousel-item ${index === 0 ? "active" : ""}">
+                              <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
+                            </div>`
+                )
+                .join("")}
+                    </div>
+                  </div>
+                  <p class="name mb-8">${item.name}</p>
+                  <p class="description mb-24">${item.description}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center colors">
+                      ${item.colors
+                .map((color) => `<div class="color ${color}"></div>`)
+                .join("")}
+                    </div>
+                    <div class="code-container">
+                      <button class="btn code">
+                        Code: ${item.code}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+
+            // Add cards to relevant category container
+            if (item.catalogue === "Body") {
+              bodyContainer.querySelector('.items-container').innerHTML += cardHTML;
+            } else if (item.catalogue === "Head") {
+              headContainer.querySelector('.items-container').innerHTML += cardHTML;
+            } else if (item.catalogue === "Feet") {
+              feetContainer.querySelector('.items-container').innerHTML += cardHTML;
+            } else if (item.catalogue === "Other") {
+              otherContainer.querySelector('.items-container').innerHTML += cardHTML;
+            }
+          });
+        };
+
+        renderItems(data);
+
+        document.querySelectorAll(".submenu div").forEach((submenuItem) => {
+          submenuItem.addEventListener("click", (event) => {
+            const selectedSubCategory = event.target.textContent.trim();
+            const parentCategory = event.target.closest(".submenu").id;
+
+            if (activeFilter && activeFilter.subCategory === selectedSubCategory && activeFilter.category === parentCategory) {
+              activeFilter = null;
+              renderItems(data);
+              document.querySelectorAll('.row').forEach(row => row.style.display = 'block');
+            } else {
+              activeFilter = { category: parentCategory, subCategory: selectedSubCategory };
+
+              const filteredData = data.filter(
+                (item) =>
+                  item.catalogue.toLowerCase() === parentCategory.toLowerCase() &&
+                  item.subcatalogue.toLowerCase() === selectedSubCategory.toLowerCase()
+              );
+              renderItems(filteredData);
+              document.querySelectorAll('.row').forEach(row => row.style.display = 'none');
+
+              if (selectedSubCategory === 'Socks') {
+                feetContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Jackets') {
+                bodyContainer.style.display = 'block';  
+              } else if (selectedSubCategory === 'Caps') {
+                headContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Hats') {
+                headContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Shirts') {
+                bodyContainer.style.display = 'block';  
+              } else if (selectedSubCategory === 'Coats') {
+                bodyContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Blouses') {
+                bodyContainer.style.display = 'block';
+              } else if (selectedSubCategory === 'Pants') {
+                feetContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Footwear') {
+                feetContainer.style.display = 'block';  
+              } else if (selectedSubCategory === 'Jeans') {
+                feetContainer.style.display = 'block'; 
+              } else if (selectedSubCategory === 'Accessories') {
+                otherContainer.style.display = 'block';
+              }
+            }
+          });
         });
       })
       .catch((error) => console.error("Error fetching data:", error));
-
   </script>
+
 
 </body>
 

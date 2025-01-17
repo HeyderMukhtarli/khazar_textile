@@ -12,7 +12,9 @@
             "black",
             "gray",
             "blue"
-        ]
+        ],
+        "catalogue": "Body",
+        "subcatalogue": "Shirts"
     },
     {
         "name": "Another Shirt Example",
@@ -27,7 +29,9 @@
             "black",
             "gray",
             "blue"
-        ]
+        ],
+        "catalogue": "Body",
+        "subcatalogue": "Jackets"
     },
     {
         "name": "Another Shirt Example",
@@ -42,7 +46,9 @@
             "black",
             "gray",
             "blue"
-        ]
+        ],
+        "catalogue": "Body",
+        "subcatalogue": "Blouses"
     },
     {
         "name": "Another Shirt Example",
@@ -57,6 +63,110 @@
             "black",
             "gray",
             "blue"
-        ]
+        ],
+        "catalogue": "Body",
+        "subcatalogue": "Coats"
+    },
+    {
+        "name": "Another Shirt Example (Head)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Head",
+        "subcatalogue": "Hats"
+    },
+    {
+        "name": "Another Shirt Example (Head2)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Head",
+        "subcatalogue": "Caps"
+    },
+    {
+        "name": "Another Shirt Example (Feet)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Feet",
+        "subcatalogue": "Pants"
+    },
+    {
+        "name": "Another Shirt Example (Feet2 Socks)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Feet",
+        "subcatalogue": "Socks"
+    },
+    {
+        "name": "Another Shirt Example (Feet2 Socks)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Feet",
+        "subcatalogue": "Jeans"
+    },
+    {
+        "name": "Another Shirt Example (Other)",
+        "description": "This is another example description for a different product...",
+        "code": "123456",
+        "carouselImages": [
+            "img/carousel.png",
+            "img/carousel2.png",
+            "img/carousel.png"
+        ],
+        "colors": [
+            "black",
+            "gray",
+            "blue"
+        ],
+        "catalogue": "Other",
+        "subcatalogue": "Accessories"
     }
 ]
