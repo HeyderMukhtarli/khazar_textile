@@ -39,12 +39,38 @@ function updateLanguage(languageCode) {
         hideSidebar: document.querySelector("#hideSidebarButton"),
     };
 
-    elementsToUpdate.products.innerHTML = `<i class="bi bi-box"></i> ${translations[languageCode].products}`;
-    elementsToUpdate.about.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
-    elementsToUpdate.download.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
-    elementsToUpdate.hideSidebar.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i> ${translations[languageCode].hideSidebar}`;
-    elementsToUpdate.selectLanguage.textContent = translations[languageCode].selectLanguage;
+    // Check if elements exist before updating innerHTML
+    if (elementsToUpdate.products) {
+        const textDiv = elementsToUpdate.products.querySelector("div");
+        if (textDiv) {
+            textDiv.innerHTML = `<i class="bi bi-box"></i> ${translations[languageCode].products}`;
+        }
+    }
 
+    if (elementsToUpdate.about) {
+         const textDiv = elementsToUpdate.about.querySelector("div");
+        if (textDiv) {
+        textDiv.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
+        }
+    }
+
+    if (elementsToUpdate.download) {
+        const textDiv = elementsToUpdate.download.querySelector("div");
+        if (textDiv) {
+       textDiv.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
+        }
+    }
+
+    if (elementsToUpdate.hideSidebar) {
+        
+        elementsToUpdate.hideSidebar.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i> ${translations[languageCode].hideSidebar}`;
+    }
+
+    if (elementsToUpdate.selectLanguage) {
+        elementsToUpdate.selectLanguage.textContent = translations[languageCode].selectLanguage;
+    }
+
+    // Loop over language options
     elementsToUpdate.languageOptions.forEach((option, index) => {
         const textNode = option.querySelector("span");
         if (textNode) {
@@ -57,7 +83,11 @@ function updateLanguage(languageCode) {
         }
     });
 
-    document.querySelector(".language-indicator").textContent = languageCode;
+    // Check if language indicator exists before updating
+    const languageIndicator = document.querySelector(".language-indicator");
+    if (languageIndicator) {
+        languageIndicator.textContent = languageCode;
+    }
 }
 
 

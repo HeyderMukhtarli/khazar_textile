@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>About Us</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./catalogue.css">
+    <link rel="stylesheet" href="./about-us.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="./img/Khazar_logo.png" alt="Logo">
@@ -89,92 +89,42 @@
       </div>
     </div>
   </nav>
-  <section class="container d-flex mt-4 flex-column">
+
+  <div class="container">
     <div>
-      <button class="btn filter mb-3" id="filterButton" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M12 7L21 7" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-          <path d="M3 12H21" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-          <path d="M3 17H11" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-        <div class="notification">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <circle cx="7" cy="7" r="7" fill="#FD483B" />
-          </svg>
-        </div>
-      </button>
+    <h4 class="mt-36 mb-32 title">
+        About Us
+    </h4>
+  </div>
+  <div class="d-flex justify-content-between align-items-start gap-96">
+    <div class="d-flex flex-column gap-3 description">
+       <div class="prefix">Mission</div>
+       <div><p>We’re on a mission, a mission to ensure <span>safe and affordable</span>  work environment for every hard working individual in an industrial environment.</p></div>
+       <div><p>We manufacture <span> products to comply with latest safety standards</span> in state of the art factories in the most efficient manner.</p> </div>
+       <div><p>We design our products with <span>safety, utility, affordability</span> and style in mind. In short  we exist to protect you and your wallet, to dress you both on and off work.</p></div>
     </div>
-    <div class="d-flex justify-content-between align-items-start">
-      <div class="sidebar mr-3" id="sidebar">
-        <button class="hide-sidebar" id="hideSidebarButton">
-          <i class="fa-solid fa-arrow-left-long"></i>
-        </button>
-
-        <div class="menu">
-          <div class="menu-item" data-target="head">
-            <span>Head</span>
-            <i class="arrow fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="submenu" id="head">
-            <div>Hats</div>
-            <div>Caps</div>
-          </div>
-
-          <div class="menu-item" data-target="body">
-            <span>Body</span>
-            <i class="arrow fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="submenu" id="body">
-            <div>Shirts</div>
-            <div>Jackets</div>
-            <div>Coats</div>
-            <div>Blouses</div>
-          </div>
-
-          <div class="menu-item" data-target="feet">
-            <span>Feet</span>
-            <i class="arrow fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="submenu" id="feet">
-            <div>Pants</div>
-            <div>Jeans</div>
-            <div>Socks</div>
-            <div>Footwear</div>
-          </div>
-
-          <div class="menu-item" data-target="other">
-            <span>Other</span>
-            <i class="arrow fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="submenu" id="other">
-            <div>Accessories</div>
-            <div>Other Items</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="catalogue">
-        <div id="catalogueContainer"></div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer-container container d-flex justify-content-center align-items-center">
-    <p class="mb-0">© All Rights Reserved 2025</p>
-  </footer>
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button type="button" class="btn-close close-modal">X</button>
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img src="img/carousel.png" alt="Carousel Image">
-        </div>
-      </div>
+    <div class="w-50">
+   <img class="about-us-img" src="img/about-us1.png">
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <div class=" mt-96 d-flex justify-content-between align-items-start gap-96">
+    <div class="d-flex flex-column gap-3 description">
+       <div class="prefix">Vision</div>
+       <div><p>We’re on a mission, a mission to ensure <span>safe and affordable work</span> environment for every hard working individual in an industrial environment.</p> </div>
+       <div><p>We design our products with <span>safety, utility, affordability</span> and style in mind. In short  we exist to protect you and your wallet, to dress you both on and off work.</p></div>
+    </div>
+    <div class="w-50">
+   <img class="about-us-img" src="img/about-us2.png">
+    </div>
+  </div>
+  </div>
+
+
+   <footer class="footer-container container d-flex justify-content-center align-items-center">
+    <p class="mb-0">© All Rights Reserved 2025</p>
+  </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./lang.js"></script>
-  <script src="script.js"></script>
 
 </body>
 

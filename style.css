@@ -107,7 +107,37 @@ body {
     align-items: center;
     justify-content: center;
 }
+.nav-link{
+    display: flex !important;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+}
+.btn-download {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.nav-link img{
+    width: 22px;
+    height: 22px;
+}
+.btn-phone{
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
 
+.btn-phone img {
+    width: 22px;
+    height: 22px;
+}
+.btn-download img {
+    width: 22px;
+    height: 22px;
+}
 .modal-content {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

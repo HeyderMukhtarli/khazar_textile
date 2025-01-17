@@ -1,0 +1,51 @@
+.mt-36{
+    margin-top: 36px;
+}
+.mb-32{
+    margin-bottom: 32px;
+}
+.title{
+    color: var(--Black, #000);
+        font-family: "Schibsted Grotesk";
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+}
+
+.description p{
+    color: var(--Gray, #666);
+        font-family: "Schibsted Grotesk";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        margin: 0;
+}
+.description span{
+    color: var(--Black, #000);
+    font-weight: bold;
+}
+.gap-96{
+    gap: 96px;
+}
+
+.about-us-img{
+   
+    border-radius: var(--radius-l, 32px);
+        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+.prefix{
+    border-radius: var(--radius-s, 18px);
+        border: 1px solid var(--black-10, rgba(0, 0, 0, 0.10));
+        display: flex;
+            padding: 10px 18px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-right: auto;
+}
+
+.mt-96{
+    margin-top: 96px;
+}
