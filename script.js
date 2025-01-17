@@ -1,4 +1,3 @@
- 
 fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -17,7 +16,7 @@ fetch("./data.json")
         </div>
         <div class="items-container d-flex flex-row flex-wrap"></div>
       `;
-      
+
       catalogueContainer.appendChild(categoryContainer);
     });
 
@@ -35,21 +34,21 @@ fetch("./data.json")
                 <button class="btn tabs share"><img src="img/share.png" alt=""></button>
                 <ol class="carousel-indicators">
                   ${item.carouselImages
-                    .map(
-                      (image, index) =>
-                        `<li data-target="#carousel-${item.code}" data-slide-to="${index}" class="${index === 0 ? "active" : ""}"></li>`
-                    )
-                    .join("")}
+            .map(
+              (image, index) =>
+                `<li data-target="#carousel-${item.code}" data-slide-to="${index}" class="${index === 0 ? "active" : ""}"></li>`
+            )
+            .join("")}
                 </ol>
                 <div class="carousel-inner">
                   ${item.carouselImages
-                    .map(
-                      (image, index) =>
-                        `<div class="carousel-item ${index === 0 ? "active" : ""}">
+            .map(
+              (image, index) =>
+                `<div class="carousel-item ${index === 0 ? "active" : ""}">
                           <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
                         </div>`
-                    )
-                    .join("")}
+            )
+            .join("")}
                 </div>
               </div>
               <p class="name mb-8">${item.name}</p>
@@ -96,21 +95,41 @@ fetch("./data.json")
     `;
 
     document.querySelectorAll(".submenu div").forEach((submenuItem) => {
+      let isSubcategorySelected = false;
+
       submenuItem.addEventListener("click", (event) => {
-        const selectedSubCategory = event.target.textContent.trim();
-        const filteredData = data.filter((item) => item.subcatalogue === selectedSubCategory);
-        renderItems(filteredData);
+        if (isSubcategorySelected && event.target.classList.contains("bold")) {
+          event.target.classList.remove("bold");
+          renderItems(data);
+          document.querySelectorAll(".row").forEach((row) => {
+            row.style.display = "block";
+          });
+          isSubcategorySelected = false;
+        } else {
+          document.querySelectorAll(".submenu div").forEach(item => {
+            item.classList.remove("bold");
+          });
 
-        document.querySelectorAll(".row").forEach((row) => {
-          row.style.display = "none";
-        });
+          const selectedSubCategory = event.target;
+          selectedSubCategory.classList.add("bold");
 
-        const visibleCategories = [...new Set(filteredData.map((item) => item.catalogue))];
-        visibleCategories.forEach((category) => {
-          document.querySelector(`#${category.toLowerCase()}Catalogue`).style.display = "block";
-        });
+          const selectedSubCategoryText = selectedSubCategory.textContent.trim();
+          const filteredData = data.filter((item) => item.subcatalogue === selectedSubCategoryText);
+          renderItems(filteredData);
 
-        const firstVisibleCategory = visibleCategories[0];
+          document.querySelectorAll(".row").forEach((row) => {
+            row.style.display = "none";
+          });
+
+          const visibleCategories = [...new Set(filteredData.map((item) => item.catalogue))];
+          visibleCategories.forEach((category) => {
+            document.querySelector(`#${category.toLowerCase()}Catalogue`).style.display = "block";
+          });
+
+          isSubcategorySelected = true;
+        }
+
+        const firstVisibleCategory = [...new Set(filteredData.map((item) => item.catalogue))][0];
         const firstVisibleCategoryContainer = document.querySelector(`#${firstVisibleCategory.toLowerCase()}Catalogue`);
 
         const existingSearch = firstVisibleCategoryContainer.querySelector(".search");
@@ -145,5 +164,10 @@ fetch("./data.json")
         item.name.toLowerCase().includes(searchTerm)
       );
       renderItems(filteredData);
+    });
+
+    document.querySelector(".bi-x").addEventListener("click", () => {
+      searchInput.value = "";
+      renderItems(data);
     });
   });

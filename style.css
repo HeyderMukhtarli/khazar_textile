@@ -216,9 +216,16 @@ body {
     transform: rotate(90deg);
 }
 
-.row{
+.row {
     margin: 0px !important;
 }
+
+.bold {
+    font-weight: bold;
+}
+
+
+
 
 @media (max-width: 768px) {
     .contact-info {
