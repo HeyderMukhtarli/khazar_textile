@@ -103,6 +103,7 @@
         </div>
       </button>
     </div>
+    <div class="d-flex justify-content-between align-items-start">
     <div class="sidebar mr-3" id="sidebar">
       <button class="hide-sidebar" id="hideSidebarButton">
         <i class="fa-solid fa-arrow-left-long"></i>
@@ -175,12 +176,24 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
 
   <footer class="footer-container container d-flex justify-content-center align-items-center">
     <p class="mb-0">© All Rights Reserved 2025</p>
   </footer>
+   <!-- modal -->
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="btn-close close-modal">X</button>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <img src="img/carousel.png" alt="Carousel Image">
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./lang.js"></script>
@@ -203,24 +216,36 @@
     });
 
 
+
     document.addEventListener("DOMContentLoaded", () => {
-      const filterButton = document.getElementById("filterButton");
-      const sidebar = document.getElementById("sidebar");
-      const hideSidebarButton = document.getElementById("hideSidebarButton");
-      const sectionContainer = document.querySelector("section.container");
+  const sidebar = document.getElementById("sidebar");
+  const hideSidebarButton = document.getElementById("hideSidebarButton");
+  const filterButton = document.getElementById("filterButton");
+  const body = document.body;
 
-      filterButton.addEventListener("click", () => {
-        sectionContainer.classList.remove("flex-column");
-        sidebar.style.display = "block";
-        filterButton.classList.add("hidden");
-      });
+  filterButton.addEventListener("click", () => {
+    sidebar.style.display = "block";
+    filterButton.classList.add("hidden");
+    body.classList.add("sidebar-open"); // Add the class to toggle column size
+  });
 
-      hideSidebarButton.addEventListener("click", () => {
-        sectionContainer.classList.add("flex-column");
-        sidebar.style.display = "none";
-        filterButton.classList.remove("hidden");
-      });
-    });
+  hideSidebarButton.addEventListener("click", () => {
+    sidebar.style.display = "none";
+    filterButton.classList.remove("hidden");
+    body.classList.remove("sidebar-open"); // Remove the class when sidebar is closed
+  });
+    document.addEventListener("click", (event) => {
+    if (event.target.closest(".magnifier")) {
+      const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter"));
+      modal.show();
+    }
+  });
+   document.querySelector(".close-modal").addEventListener("click", () => {
+    const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModalCenter"));
+    modal.hide();
+  });
+});
+
 
 
 
@@ -250,7 +275,7 @@
               .map(
                 (image, index) =>
                   `<div class="carousel-item ${index === 0 ? "active" : ""}">
-                    <img class="d-block w-100" src="${image}" alt="Slide ${index + 1}">
+                    <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
                   </div>`
               )
               .join("")}
@@ -258,7 +283,7 @@
         </div>
 
         <p class="name mb-8">${item.name}</p>
-        <p class="desciption mb-24">${item.description}</p>
+        <p class="description mb-24">${item.description}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center colors">
             ${item.colors

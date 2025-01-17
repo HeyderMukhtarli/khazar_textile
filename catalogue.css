@@ -70,13 +70,16 @@ color: var(--Gray, #666);
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
+        min-height: 70px;
         line-height: 140%;
 }
 .description{
 color: var(--Gray, #666);
     font-family: "Schibsted Grotesk";
     font-size: 14px;
+    min-height: 40px;
     font-style: normal;
+    
     font-weight: 400;
     line-height: 150%;
 }
@@ -123,6 +126,9 @@ color: var(--Gray, #666);
     width: 18px;
     border: 1px solid var(--Body-Background, #E9E9EB);
 
+}
+.row .col-4{
+    padding:8px !important;
 }
 .carousel-indicators{
     padding: 8px;
@@ -171,3 +177,40 @@ border-radius: var(--radius-s, 18px);
 .code-container{
     border-radius: 12px;
 }
+
+  .sidebar-open .col-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+
+  .carousel-img{
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .modal-content{
+    border-radius: var(--radius-l, 32px) !important;
+        background: var(--White, #FFF);
+        position: relative;
+  }
+  .modal-body{
+    padding: 36px;
+  }
+  .close-modal{
+    position: absolute;
+    top: -53px;
+    right: 0px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+    cursor: pointer;
+    padding: 16px 20px;
+    border-radius: var(--radius-s, 18px);
+        background: var(--Alternative-White, #EFEFF0);
+  }
+
+  /* Optional: To adjust the opacity */
+  .modal-backdrop.show{
+    background:  rgba(0, 0, 0, 0.10) !important;
+        backdrop-filter: blur(16px) !important;
+  }
