@@ -51,7 +51,7 @@ fetch("./data.json")
             .join("")}
                 </div>
               </div>
-              <p class="name mb-8">${item.name}</p>
+              <p class="name mb-8 cursor-pointer">${item.name}</p>
               <p class="description mb-24">${item.description}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-between align-items-center colors">
@@ -171,3 +171,24 @@ fetch("./data.json")
       renderItems(data);
     });
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const catalogueContainer = document.querySelector("#catalogueContainer");
+
+  catalogueContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("name")) {
+      const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter2"));
+      modal.show();
+    }
+  });
+  const closeModalButtons = document.querySelectorAll(".btn-close");
+  closeModalButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modals = document.querySelectorAll(".modal.show");
+      modals.forEach((modal) => {
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+      });
+    });
+  });
+});

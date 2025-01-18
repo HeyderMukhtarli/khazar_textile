@@ -167,7 +167,12 @@ body {
     border-radius: 4px;
 }
 
-.modal-backdrop.show {
+.show {
+    backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.show2 {
     backdrop-filter: blur(30px);
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -254,8 +259,9 @@ body {
     font-weight: bold;
 }
 
-
-
+.cursor-pointer {
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .contact-info {
