@@ -172,6 +172,22 @@ fetch("./data.json")
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("nav.navbar");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+      // User is scrolling down
+      header.style.transform = "translateY(-100%)"; // Hide the header
+    } else {
+      // User is scrolling up
+      header.style.transform = "translateY(0)"; // Show the header
+    }
+    lastScrollY = window.scrollY;
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const catalogueContainer = document.querySelector("#catalogueContainer");
 

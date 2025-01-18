@@ -232,8 +232,16 @@ body {
     width: 250px;
     justify-content: space-between;
 }
-
-
+nav.navbar {
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.mt-60{
+    margin-top: 60px;
+}
 .submenu {
     display: none;
     padding-left: 20px;
