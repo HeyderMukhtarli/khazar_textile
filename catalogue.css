@@ -206,9 +206,32 @@ border-radius: var(--radius-s, 18px);
         background: var(--Alternative-White, #EFEFF0);
         opacity: 1;
   }
+  .card-container{
+    padding: 8px !important;
+  }
 
-
+.mt-90 {
+    margin-top: 90px;
+}
 
   .m-0{
     margin: 0 !important;
   }
+@media (max-width: 768px) {
+    .container{
+
+        padding: 0 !important;
+    }
+    .card{
+            margin-bottom: 8px;
+    }
+    .card-container{
+        padding: 0 !important;
+    }
+     .title{
+
+            font-size: 28px;
+            font-weight: 400;
+            line-height: normal;
+    }
+}

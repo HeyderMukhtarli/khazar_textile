@@ -27,7 +27,7 @@ fetch("./data.json")
 
       filteredData.forEach((item) => {
         const cardHTML = `
-          <div class="col-4">
+          <div class="col-md-4 col-12 card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
                 <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
@@ -77,7 +77,7 @@ fetch("./data.json")
     const firstVisibleCategoryContainer = document.querySelector(`#${firstVisibleCategory.toLowerCase()}Catalogue`);
 
     firstVisibleCategoryContainer.querySelector(".mb-20").innerHTML += `
-      <div class="search position-relative">
+      <div class="search position-relative d-md-block d-none">
         <input type="text" class="form-control pl-5 pr-5" placeholder="Search" id="searchInput">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-search position-absolute"
