@@ -329,10 +329,23 @@ nav.navbar {
     width: 100px;
 }
 
+.mobile-filter-div{
+    display: none ;
+}
+
+
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .mobile-filter{
+        flex-direction: column;
+    }
+
+    .mobile-filter-div{
+        display: flex;
     }
 
 }
@@ -362,7 +375,6 @@ nav.navbar {
         border-top-right-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
     }
-
 }
 
 @media (max-width: 460px) {
