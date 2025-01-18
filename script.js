@@ -11,7 +11,7 @@ fetch("./data.json")
       categoryContainer.id = `${category.toLowerCase()}Catalogue`;
 
       categoryContainer.innerHTML = `
-        <div class="mb-20 d-flex justify-content-between align-items-center">
+        <div class="mb-20 pl-3 d-flex justify-content-between align-items-center">
           <p class="mb-0 title ">Catalogue for ${category}</p>
         </div>
         <div class="items-container d-flex flex-row flex-wrap"></div>
@@ -27,7 +27,7 @@ fetch("./data.json")
 
       filteredData.forEach((item) => {
         const cardHTML = `
-          <div class="col-md-4 col-12 card-container">
+          <div class="col-md-6 col-xl-4 col-12 card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
                 <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>

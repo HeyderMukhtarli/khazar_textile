@@ -174,17 +174,17 @@ body {
 }
 
 .modal-backdrop.show {
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
     z-index: 9999;
     position: relative;
 }
 
 .show {
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
 }
 
 .show2 {
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -223,7 +223,7 @@ body {
 }
 
 .sidebar {
-    width: 300px;
+    width: 200px;
     background: rgba(239, 239, 240, 1);
     border-right: 1px solid #ddd;
     padding: 20px;
@@ -233,6 +233,10 @@ body {
     height: fit-content;
 }
 
+.card-info-modal{
+    max-width: 60% !important;
+}
+
 .menu-item {
     display: flex;
     gap: 20px;
@@ -240,7 +244,7 @@ body {
     padding: 10px;
     cursor: pointer;
     margin-top: 5px;
-    width: 250px;
+    width: 170px;
     justify-content: space-between;
 }
 
@@ -317,6 +321,13 @@ nav.navbar {
     display: none;
 }
 
+.card-main-image{
+    position: relative;
+}
+
+.card-sub-image{
+    width: 100px;
+}
 
 @media (max-width: 768px) {
     .contact-info {
@@ -352,4 +363,10 @@ nav.navbar {
         border-bottom-right-radius: 0px !important;
     }
 
+}
+
+@media (max-width: 460px) {
+    .navbar-search{
+        width: 120px;
+    }
 }
