@@ -33,33 +33,50 @@
       <a class="navbar-brand" href="#">
         <img src="./img/Khazar_logo.png" alt="Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+     <div class="navbar-mobile-icons">
+        <button class="navbar-search-icon" type="button">
+         <svg xmlns="http://www.w3.org/2000/svg" class="search-widget" width="44" height="44" fill="currentColor"
+               class="bi bi-search position-absolute"
+              style=" cursor: pointer;" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+        </button>
+        <input type="text" class="navbar-search" id="searchInput2" placeholder="Search">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img class="widget" src="./img/Widget.png" alt="">
+        </button>
+      </div>
+
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2">
           <li class="nav-item">
             <a class="nav-link nav-products" href="index.html">
-          <img src='img/note.png'>  <div><i class="bi bi-box"></i></div>
+              <img src='img/note.png'>
+              <div><i class="bi bi-box"></i></div>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-about" href="about-us.html">
-              <img src='img/info-circle.png'><div>
-              <i class="bi bi-info-circle"></i></div>
+              <img src='img/info-circle.png'>
+              <div>
+                <i class="bi bi-info-circle"></i>
+              </div>
             </a>
           </li>
         </ul>
         <div class="d-flex align-items-center gap-3 ">
           <div class="contact-info d-flex gap-2">
             <a href="#" class="btn btn-outline-primary btn-download">
-               <img src='img/download.png'><div>
-              <i class="bi bi-download"></i></div>
+              <img src='img/download.png'>
+              <div>
+                <i class="bi bi-download"></i>
+              </div>
             </a>
             <a href="tel:+994559149161" class="btn btn-outline-secondary btn-phone">
               <img src="img/call-calling.png">
-             +994 55 914 91 61
+              +994 55 914 91 61
             </a>
           </div>
           <div class="language-selector" data-bs-toggle="modal" data-bs-target="#languageModal">

@@ -166,6 +166,15 @@ fetch("./data.json")
       renderItems(filteredData);
     });
 
+    const searchInput2 = document.getElementById("searchInput2");
+    searchInput2.addEventListener("input", function () {
+      const searchTerm = searchInput2.value.toLowerCase();
+      const filteredData = data.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm)
+      );
+      renderItems(filteredData);
+    });
+
     document.querySelector(".bi-x").addEventListener("click", () => {
       searchInput.value = "";
       renderItems(data);
@@ -178,11 +187,9 @@ fetch("./data.json")
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
-      // User is scrolling down
-      header.style.transform = "translateY(-100%)"; // Hide the header
+      header.style.transform = "translateY(-100%)"; 
     } else {
-      // User is scrolling up
-      header.style.transform = "translateY(0)"; // Show the header
+      header.style.transform = "translateY(0)";
     }
     lastScrollY = window.scrollY;
   });

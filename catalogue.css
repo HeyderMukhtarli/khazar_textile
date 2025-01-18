@@ -15,9 +15,8 @@
             height: 14px;
 }
 .search{
-    width: 12%;
+    width: 150px;
     position: relative;
-
 }
 .title{
     color: var(--Black, #000);

@@ -47,21 +47,21 @@ function updateLanguage(languageCode) {
     }
 
     if (elementsToUpdate.about) {
-         const textDiv = elementsToUpdate.about.querySelector("div");
+        const textDiv = elementsToUpdate.about.querySelector("div");
         if (textDiv) {
-        textDiv.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
+            textDiv.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
         }
     }
 
     if (elementsToUpdate.download) {
         const textDiv = elementsToUpdate.download.querySelector("div");
         if (textDiv) {
-       textDiv.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
+            textDiv.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
         }
     }
 
     if (elementsToUpdate.hideSidebar) {
-        
+
         elementsToUpdate.hideSidebar.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i> ${translations[languageCode].hideSidebar}`;
     }
 
@@ -146,5 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModalCenter"));
         modal.hide();
     });
+});
+
+
+
+const searchIcon = document.querySelector('.navbar-search-icon');
+const searchInput = document.querySelector('#searchInput2');
+const searchWidget = document.querySelector('.search-widget');
+
+// Initially hide the input
+searchInput.style.display = 'none';
+
+searchIcon.addEventListener('click', () => {
+    if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+        searchInput.style.display = 'inline-block';
+    } else {
+        searchInput.style.display = 'none';
+    }
+
+    searchWidget.classList.toggle('border-rad-search');
 });
 

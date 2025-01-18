@@ -107,23 +107,27 @@ body {
     align-items: center;
     justify-content: center;
 }
-.nav-link{
+
+.nav-link {
     display: flex !important;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
+
 .btn-download {
     display: flex !important;
     align-items: center;
     gap: 10px;
     justify-content: center;
 }
-.nav-link img{
+
+.nav-link img {
     width: 22px;
     height: 22px;
 }
-.btn-phone{
+
+.btn-phone {
     display: flex !important;
     align-items: center;
     gap: 10px;
@@ -134,10 +138,12 @@ body {
     width: 22px;
     height: 22px;
 }
+
 .btn-download img {
     width: 22px;
     height: 22px;
 }
+
 .modal-content {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -167,9 +173,14 @@ body {
     border-radius: 4px;
 }
 
+.modal-backdrop.show {
+    backdrop-filter: blur(30px);
+    z-index: 9999;
+    position: relative;
+}
+
 .show {
     backdrop-filter: blur(30px);
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .show2 {
@@ -232,6 +243,7 @@ body {
     width: 250px;
     justify-content: space-between;
 }
+
 nav.navbar {
     transition: transform 0.3s ease-in-out;
     position: fixed;
@@ -239,9 +251,11 @@ nav.navbar {
     width: 100%;
     z-index: 1000;
 }
-.mt-60{
+
+.mt-60 {
     margin-top: 60px;
 }
+
 .submenu {
     display: none;
     padding-left: 20px;
@@ -271,9 +285,71 @@ nav.navbar {
     cursor: pointer;
 }
 
+.widget {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-widget {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-search {
+    display: none;
+}
+
+.navbar-search {
+    display: none;
+}
+
+.navbar-search-icon {
+    display: none;
+    border: 0px;
+    background: none;
+}
+
+#searchInput2 {
+    display: none;
+}
+
+
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: column;
         gap: 10px;
     }
+
+}
+
+@media (max-width: 992px) {
+
+    .navbar-search,
+    .navbar-search-icon {
+        display: flex;
+    }
+
+    .navbar-search {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 0px;
+        padding: 10px;
+        width: 150px;
+    }
+
+    .navbar-mobile-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .border-rad-search {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
 }
