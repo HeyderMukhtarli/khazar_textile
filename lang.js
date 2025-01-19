@@ -37,6 +37,9 @@ function updateLanguage(languageCode) {
         selectLanguage: document.querySelector("#languageModalLabel"),
         languageOptions: document.querySelectorAll(".language-option"),
         hideSidebar: document.querySelector("#hideSidebarButton"),
+             modalProducts: document.querySelector("#navbarModal .nav-products"),
+        modalAbout: document.querySelector("#navbarModal .nav-about") ,
+         modalDownload: document.querySelector("#navbarModal .nav-download") 
     };
 
     if (elementsToUpdate.products) {
@@ -55,6 +58,24 @@ function updateLanguage(languageCode) {
 
     if (elementsToUpdate.download) {
         const textDiv = elementsToUpdate.download.querySelector("div");
+        if (textDiv) {
+            textDiv.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
+        }
+    }
+       if (elementsToUpdate.modalProducts) {
+        const textDiv = elementsToUpdate.modalProducts.querySelector("div");
+        if (textDiv) {
+            textDiv.innerHTML = `<i class="bi bi-box"></i>  ${translations[languageCode].products}`;
+        }
+    }
+          if (elementsToUpdate.modalAbout) {
+        const textDiv = elementsToUpdate.modalAbout.querySelector("div");
+        if (textDiv) {
+            textDiv.innerHTML = `<i class="bi bi-info-circle"></i> ${translations[languageCode].about}`;
+        }
+    }
+   if (elementsToUpdate.modalDownload) {
+        const textDiv = elementsToUpdate.modalDownload.querySelector("div");
         if (textDiv) {
             textDiv.innerHTML = `<i class="bi bi-download"></i> ${translations[languageCode].download}`;
         }
@@ -119,34 +140,6 @@ document.querySelectorAll(".menu-item").forEach((item) => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("sidebar");
-    const hideSidebarButton = document.getElementById("hideSidebarButton");
-    const filterButton = document.getElementById("filterButton");
-    const body = document.body;
-
-    filterButton.addEventListener("click", () => {
-        sidebar.style.display = "block";
-        filterButton.classList.add("hidden");
-        body.classList.add("sidebar-open");
-    });
-
-    hideSidebarButton.addEventListener("click", () => {
-        sidebar.style.display = "none";
-        filterButton.classList.remove("hidden");
-        body.classList.remove("sidebar-open")
-    });
-    document.addEventListener("click", (event) => {
-        if (event.target.closest(".magnifier")) {
-            const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter"));
-            modal.show();
-        }
-    });
-    document.querySelector(".close-modal").addEventListener("click", () => {
-        const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModalCenter"));
-        modal.hide();
-    });
-});
 
 
 
@@ -166,4 +159,39 @@ searchIcon.addEventListener('click', () => {
 
     searchWidget.classList.toggle('border-rad-search');
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const langOptions = document.querySelectorAll(".lang-option");
+
+  langOptions.forEach(option => {
+    console.log(option.getAttribute("data-lang").toUpperCase() )
+     console.log(currentLanguage )
+       console.log(option.getAttribute("data-lang").toUpperCase() === currentLanguage) 
+    if (option.getAttribute("data-lang").toUpperCase() === currentLanguage) {
+      option.classList.add("active");
+    } else {
+      option.classList.remove("active");
+    }
+
+    option.addEventListener("click", () => {
+      langOptions.forEach(opt => opt.classList.remove("active"));
+      option.classList.add("active");
+
+      const selectedLanguage = option.getAttribute("data-lang").toUpperCase();
+      updateLanguage(selectedLanguage);
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
 

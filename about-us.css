@@ -49,6 +49,28 @@
 .mt-96{
     margin-top: 96px;
 }
-.mt-75{
-    margin-top: 75px;
+.mt-85{
+    margin-top: 85px;
 }
+@media (max-width: 768px) {
+    .title{
+        font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+        .description p {
+            font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;}
+
+                                .my-container {
+                                    gap: 24px;
+                                }
+
+                                .mt-96{
+                                    margin-top: 56px;
+                                }
+}
+

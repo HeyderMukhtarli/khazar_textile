@@ -11,7 +11,7 @@ fetch("./data.json")
       categoryContainer.id = `${category.toLowerCase()}Catalogue`;
 
       categoryContainer.innerHTML = `
-        <div class="mb-20 pl-3 d-flex justify-content-between align-items-center">
+        <div class="mb-20  d-flex justify-content-between align-items-center">
           <p class="mb-0 title ">Catalogue for ${category}</p>
         </div>
         <div class="items-container d-flex flex-row flex-wrap"></div>
@@ -214,4 +214,69 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownButton = document.getElementById('customDropdownMenuButton');
+  const dropdownMenu = document.getElementById('customDropdownMenu');
+
+  if (dropdownButton && dropdownMenu) {
+    dropdownButton.addEventListener('click', function () {
+      if (dropdownMenu.classList.contains('d-none')) {
+        dropdownMenu.classList.remove('d-none');
+        dropdownMenu.classList.add('d-block');
+      } else {
+        dropdownMenu.classList.remove('d-block');
+        dropdownMenu.classList.add('d-none');
+      }
+    });
+  } else {
+    console.error('Dropdown elements not found');
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const hideSidebarButton = document.getElementById("hideSidebarButton");
+    const filterButton = document.getElementById("filterButton");
+    const body = document.body;
+
+    filterButton.addEventListener("click", () => {
+        sidebar.style.display = "block";
+        filterButton.classList.add("hidden");
+        body.classList.add("sidebar-open");
+    });
+
+    hideSidebarButton.addEventListener("click", () => {
+        sidebar.style.display = "none";
+        filterButton.classList.remove("hidden");
+        body.classList.remove("sidebar-open")
+    });
+    document.addEventListener("click", (event) => {
+        if (event.target.closest(".magnifier")) {
+            const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter"));
+            modal.show();
+        }
+    });
+    document.querySelector(".close-modal").addEventListener("click", () => {
+        const modal = bootstrap.Modal.getInstance(document.getElementById("exampleModalCenter"));
+        modal.hide();
+    });
+});
+
+
+const filterToggle = document.querySelector(".mobile-filter-responsive");
+const filterSection = document.querySelector(".filters");
+const arrowImg = document.querySelector(".arrow-img");
+
+filterToggle.addEventListener("click", () => {
+    if (filterSection.style.display === "none" || filterSection.style.display === "") {
+         filterSection.classList.toggle("filter-hide");
+    } else {
+        filterSection.classList.toggle("filter-hide");
+    }
+
+    // Rotate the arrow
+    arrowImg.classList.toggle("rotated");
 });

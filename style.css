@@ -223,6 +223,7 @@ body {
 }
 
 .sidebar {
+    margin-top: 36px;
     width: 200px;
     background: rgba(239, 239, 240, 1);
     border-right: 1px solid #ddd;
@@ -372,7 +373,9 @@ nav.navbar {
     background-color: #E9E9EB;
     padding: 10px;
 }
-
+.navbarModal{
+    height: 90vh;
+}
 
 @media (max-width: 1200px) {
     .card-info-modal{
@@ -387,6 +390,9 @@ nav.navbar {
 }
 
 @media (max-width: 768px) {
+    .navbar-search {
+            width: 100px !important;
+        }
     .contact-info {
         flex-direction: column;
         gap: 10px;
@@ -401,13 +407,63 @@ nav.navbar {
     }
 
     .modal-dialog{
-        padding-top: 50px !important;
+        padding-top: 60px !important;
     }
+                .modal-dialog-centered .modal-dialog {
+                    padding-top: 50px !important;
+                }
 
+}
+.lang-option.active {
+background: var(--Body-Background, #E9E9EB) !important;
+    
+}
+.modal-content {
+    border-radius: var(--radius-l, 32px) !important;
+    background: var(--White, #FFF);
+    position: relative;
+}
+
+.modal-body {
+    padding: 36px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -53px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 20px;
+    border-radius: var(--radius-s, 18px);
+    background: var(--Alternative-White, #EFEFF0);
+    opacity: 1;
+}
+#navbarModal .modal-body{
+    padding: 36px;
+}
+#navbarModal .nav-link{
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+#navbarModal .btn-phone{
+        border-radius: var(--radius-m, 24px);
+            border: 1px solid var(--Body-Background, #E9E9EB);
+            padding: 18px 20px;
+}
+#navbarModal .langs div {
+    border-radius: var(--radius-s, 18px);
+        border: 1px solid var(--Body-Background, #E9E9EB);
+        background: var(--White, #FFF);
+        padding: 16px 20px;
 }
 
 @media (max-width: 992px) {
-
+   .catalogue-datils-modal-centered{
+    align-items: flex-start !important;
+   }
     .navbar-search,
     .navbar-search-icon {
         display: flex;
