@@ -122,21 +122,7 @@ document.querySelectorAll(".language-option").forEach(option => {
 updateLanguage(currentLanguage);
 
 
-document.querySelectorAll(".menu-item").forEach((item) => {
-    item.addEventListener("click", () => {
-        const targetId = item.getAttribute("data-target");
-        const submenu = document.getElementById(targetId);
-        const arrow = item.querySelector(".arrow");
 
-        if (submenu.style.display === "block") {
-            submenu.style.display = "none";
-            arrow.classList.remove("rotate");
-        } else {
-            submenu.style.display = "block";
-            arrow.classList.add("rotate");
-        }
-    });
-});
 
 
 

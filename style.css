@@ -224,7 +224,7 @@ body {
 
 .sidebar {
     margin-top: 36px;
-    width: 275px;
+    width: 300px;
     background: rgba(239, 239, 240, 1);
     border-right: 1px solid #ddd;
     padding: 20px;
@@ -245,7 +245,7 @@ body {
     padding: 10px;
     cursor: pointer;
     margin-top: 5px;
-    width: 235px;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -262,14 +262,17 @@ nav.navbar {
 }
 
 .submenu {
-    display: none;
+    display: none ;
     padding-left: 20px;
     margin-top: 5px;
     border-left: 2px solid #ddd;
     margin-left: 40px;
     cursor: pointer;
 }
-
+.active-submenu{
+    display: block;
+    font-weight: 600;
+}
 .arrow {
     transition: transform 0.2s;
 }
@@ -374,7 +377,10 @@ nav.navbar {
     padding: 10px;
 }
 .navbarModal{
-    height: 90vh;
+    height: 100%;
+}
+.navbarDialog{
+    height: calc( 100% - 60px );
 }
 
 @media (max-width: 1200px) {

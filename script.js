@@ -93,68 +93,7 @@ fetch("./data.json")
       </div>
     `;
 
-    document.querySelectorAll(".submenu div").forEach((submenuItem) => {
-      let isSubcategorySelected = false;
 
-      submenuItem.addEventListener("click", (event) => {
-        if (isSubcategorySelected && event.target.classList.contains("bold")) {
-          event.target.classList.remove("bold");
-          renderItems(data);
-          document.querySelectorAll(".row").forEach((row) => {
-            row.style.display = "block";
-          });
-          isSubcategorySelected = false;
-        } else {
-          document.querySelectorAll(".submenu div").forEach(item => {
-            item.classList.remove("bold");
-          });
-
-          const selectedSubCategory = event.target;
-          selectedSubCategory.classList.add("bold");
-
-          const selectedSubCategoryText = selectedSubCategory.textContent.trim();
-          const filteredData = data.filter((item) => item.subcatalogue === selectedSubCategoryText);
-          renderItems(filteredData);
-
-          document.querySelectorAll(".row").forEach((row) => {
-            row.style.display = "none";
-          });
-
-          const visibleCategories = [...new Set(filteredData.map((item) => item.catalogue))];
-          visibleCategories.forEach((category) => {
-            document.querySelector(`#${category.toLowerCase()}Catalogue`).style.display = "block";
-          });
-
-          isSubcategorySelected = true;
-        }
-
-        const firstVisibleCategory = [...new Set(filteredData.map((item) => item.catalogue))][0];
-        const firstVisibleCategoryContainer = document.querySelector(`#${firstVisibleCategory.toLowerCase()}Catalogue`);
-
-        const existingSearch = firstVisibleCategoryContainer.querySelector(".search");
-        if (existingSearch) {
-          existingSearch.remove();
-        }
-
-        firstVisibleCategoryContainer.querySelector(".mb-20").innerHTML += `
-          <div class="search position-relative">
-            <input type="text" class="form-control pl-5 pr-5" placeholder="Search" id="searchInput">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-search position-absolute"
-              style="top: 50%; left: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-x position-absolute"
-              style="top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" viewBox="0 0 16 16">
-              <path
-                d="M4.293 4.293a1 1 0 0 1 1.414 0L8 6.586l2.293-2.293a1 1 0 1 1 1.414 1.414L9.414 8l2.293 2.293a1 1 0 1 1-1.414 1.414L8 9.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L6.586 8 4.293 5.707a1 1 0 0 1 0-1.414z" />
-            </svg>
-          </div>
-        `;
-      });
-    });
 
     const searchInput = document.getElementById("searchInput");
     searchInput.addEventListener("input", function () {
@@ -252,16 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    hideSidebarButton.addEventListener("click", () => {
-        sidebar.style.display = "none";
-        filterButton.classList.remove("hidden");
-        body.classList.remove("sidebar-open")
-          const cardContainers = document.querySelectorAll(".card-container");
 
-        cardContainers.forEach((cardContainer) => {
-            cardContainer.classList.remove("custom-col-6");
-        });
-    });
     document.addEventListener("click", (event) => {
         if (event.target.closest(".magnifier")) {
             const modal = new bootstrap.Modal(document.getElementById("exampleModalCenter"));
