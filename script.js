@@ -27,7 +27,7 @@ fetch("./data.json")
 
       filteredData.forEach((item) => {
         const cardHTML = `
-          <div class="col-md-6 col-xl-4 col-12 card-container">
+          <div  class=" col-md-4 col-12 card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
                 <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
@@ -246,12 +246,22 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.style.display = "block";
         filterButton.classList.add("hidden");
         body.classList.add("sidebar-open");
+         const cardContainers = document.querySelectorAll(".card-container");
+
+        cardContainers.forEach((cardContainer) => {
+            cardContainer.classList.add("custom-col-6");
+        });
     });
 
     hideSidebarButton.addEventListener("click", () => {
         sidebar.style.display = "none";
         filterButton.classList.remove("hidden");
         body.classList.remove("sidebar-open")
+          const cardContainers = document.querySelectorAll(".card-container");
+
+        cardContainers.forEach((cardContainer) => {
+            cardContainer.classList.remove("custom-col-6");
+        });
     });
     document.addEventListener("click", (event) => {
         if (event.target.closest(".magnifier")) {

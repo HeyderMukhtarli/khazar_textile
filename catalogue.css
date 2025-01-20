@@ -244,6 +244,13 @@ border-radius: var(--radius-s, 18px);
    .filter-hide {
        display: none !important;
    }
+@media (min-width: 992px) {
+    .custom-col-6 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box;
+    }
+}
   .filters .sub-category{
     padding: 10px 18px;
     border-radius: var(--radius-xs, 12px);
