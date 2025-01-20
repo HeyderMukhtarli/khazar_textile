@@ -31,7 +31,8 @@
 }
 
 .about-us-img{
-   
+    object-fit: contain;
+        min-height: 380px;
     border-radius: var(--radius-l, 32px);
         background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
