@@ -27,7 +27,7 @@ fetch("./data.json")
 
       filteredData.forEach((item) => {
         const cardHTML = `
-          <div  class=" col-md-4 col-12 card-container">
+          <div  class="col-sm-6 col-md-4 col-12 card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
                 <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>

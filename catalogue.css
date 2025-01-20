@@ -244,7 +244,7 @@ border-radius: var(--radius-s, 18px);
    .filter-hide {
        display: none !important;
    }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .custom-col-6 {
         flex: 0 0 50% !important;
         max-width: 50% !important;
@@ -283,15 +283,18 @@ border-radius: var(--radius-s, 18px);
         padding: 0 !important;
     }
     .card{
-            margin-bottom: 8px;
+        margin-bottom: 8px;
     }
-    .card-container{
-        padding: 0 !important;
-    }
-     .title{
 
-            font-size: 28px;
-            font-weight: 400;
-            line-height: normal;
+    .title{
+
+        font-size: 28px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+@media (max-width: 576px) {
+    .card-container {
+        padding: 0 !important;
     }
 }
