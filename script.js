@@ -30,7 +30,6 @@ fetch("./data.json")
           <div  class="col-lg-6 col-xl-4  col-12  card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
-                <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
                 <button class="btn tabs share"><img src="img/share.png" alt=""></button>
                 <ol class="carousel-indicators">
                   ${item.carouselImages
@@ -287,6 +286,7 @@ filterToggle.addEventListener("click", () => {
         filterSection.classList.toggle("filter-hide");
     }
 
-    // Rotate the arrow
     arrowImg.classList.toggle("rotated");
 });
+
+                //  <button class="btn tabs magnifier"><img src="img/magnifier.png" alt=""></button>
