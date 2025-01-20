@@ -224,7 +224,7 @@ body {
 
 .sidebar {
     margin-top: 36px;
-    width: 200px;
+    width: 275px;
     background: rgba(239, 239, 240, 1);
     border-right: 1px solid #ddd;
     padding: 20px;
@@ -245,7 +245,7 @@ body {
     padding: 10px;
     cursor: pointer;
     margin-top: 5px;
-    width: 170px;
+    width: 235px;
     justify-content: space-between;
 }
 
