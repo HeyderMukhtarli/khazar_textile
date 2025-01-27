@@ -224,18 +224,21 @@ body {
 
 .sidebar {
     margin-top: 36px;
-    width: 300px;
+    width: 450px;
     background: rgba(239, 239, 240, 1);
     border-right: 1px solid #ddd;
     padding: 20px;
     display: none;
     border-radius: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     height: fit-content;
 }
 
 .card-info-modal {
     max-width: 60% !important;
+}
+
+.active-link{
+    background-color: #ddd;
 }
 
 .menu-item {
@@ -266,13 +269,17 @@ nav.navbar {
     padding-left: 20px;
     margin-top: 5px;
     border-left: 2px solid #ddd;
-    margin-left: 40px;
+    margin-left: 18px;
     cursor: pointer;
 }
 
 .active-submenu {
     display: block;
     font-weight: 600;
+}
+
+.ative-link{
+    background-color: #007bff !important;
 }
 
 .arrow {
