@@ -259,7 +259,9 @@ border-radius: var(--radius-s, 18px);
    .arrow-img {
        transition: transform 0.3s ease;
    }
-
+.subcategory-container{
+    padding-inline: 0.5rem;
+}
    .arrow-img.rotated {
        transform: rotate(180deg);
    }
