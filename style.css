@@ -31,16 +31,16 @@ body {
     font-size: 14px;
     border: 0px;
     border-radius: 15px;
-    background-color: #fff;
+    background-color: #EFEFF0;
     color: #000;
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
+/* 
 .nav-link:hover {
     background-color: #e9ecef;
     border-color: #ccc;
-}
+} */
 
 .contact-info .btn {
     display: flex;
@@ -51,39 +51,35 @@ body {
     padding: 10px 20px;
     border: 0px;
     border-radius: 15px;
-    background-color: #fff;
+        background-color: #EFEFF0;
     color: #000;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.contact-info .btn:hover {
+/* .contact-info .btn:hover {
     background-color: #e9ecef;
     border-color: #ccc;
 }
+ */
+
+ 
 
 .language-selector {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    color: #000;
-    border-radius: 15px;
-    height: 40px;
-    width: 40px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
+        align-items: center;
+        justify-content: centexr;
+        background-color:#EFEFF0;
+        color: #000;
+        border-radius: 15px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    
     justify-content: center;
     position: relative;
     cursor: pointer;
     width: 45px;
     height: 45px;
-    background-color: #fff;
     border-radius: 15px;
 }
 
@@ -148,12 +144,20 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.navbar-nav .nav-link{
+        background-color: #FFF !important;
+}
 
 .modal-body .language-options {
     padding: 0;
 }
+.modal-body .language-options li{
+        border-radius: 18px;
+        overflow: hidden;
+}
 
 .modal-body .language-option {
+    
     display: block;
     padding: 10px;
     font-size: 16px;
@@ -192,7 +196,7 @@ body {
     background-color: #fff;
     height: 60px;
     border-radius: 20px;
-    margin: 40px 0px;
+    margin: 0px 0px 40px 0px;
 }
 
 .footer-container p {
@@ -238,7 +242,7 @@ body {
 }
 
 .active-link{
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .menu-item {
@@ -422,7 +426,9 @@ nav.navbar {
     padding: 0.5rem;
     border-radius: 8px;
 }
-
+.navbarModal{
+    margin-inline: 12px;
+}
 
 @media (max-width: 1200px) {
     .card-info-modal {
@@ -455,7 +461,7 @@ nav.navbar {
     }
 
     .modal-dialog {
-        padding-top: 60px !important;
+        padding-top: 70px !important;
     }
 
     .modal-dialog-centered .modal-dialog {
@@ -466,7 +472,7 @@ nav.navbar {
 
 .lang-option.active {
     background: var(--Body-Background, #E9E9EB) !important;
-
+t
 }
 
 .modal-content {
@@ -478,23 +484,27 @@ nav.navbar {
 .modal-body {
     padding: 36px;
 }
+.navbar-search:focus-visible{
+ 
+  outline: none; 
+  
+}
 
 .close-modal {
     position: absolute;
-    top: -53px;
+    top: -60px;
+    background: var(--White, #FFF) !important;
     right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 16px 20px;
+    padding: 18px 20px;
     border-radius: var(--radius-s, 18px);
-    background: var(--Alternative-White, #EFEFF0);
     opacity: 1;
 }
-
-#navbarModal .modal-body {
-    padding: 36px;
+.navbar-toggler:focus {
+box-shadow:  none !important;
 }
 
 #navbarModal .nav-link {
@@ -513,6 +523,10 @@ nav.navbar {
     border: 1px solid var(--Body-Background, #E9E9EB);
     background: var(--White, #FFF);
     padding: 16px 20px;
+}
+#navbarModal .langs .lang-option{
+    display: flex;
+    flex: auto;
 }
 
 @media (max-width: 992px) {
@@ -548,7 +562,14 @@ nav.navbar {
         padding-top: 30px;
     }
 }
-
+.btn-outline-primary:hover,.btn-outline-secondary:hover {
+    color: inherit !important;
+    background-color: transparent !important;
+    border-color: inherit !important;
+}
+.form-control:focus {
+   
+    box-shadow: none !important;}
 @media (max-width: 460px) {
     .navbar-search {
         width: 120px;

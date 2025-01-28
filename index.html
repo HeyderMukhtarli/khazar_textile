@@ -32,7 +32,7 @@
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container p-0">
       <a class="navbar-brand" href="#">
-        <img src="./img/Khazar_logo.svg" alt="Logo">
+        <img  src="./img/Khazar_logo.svg" alt="Logo">
       </a>
       <div class="navbar-mobile-icons">
         <button class="navbar-search-icon" type="button">
@@ -53,7 +53,7 @@
       <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2">
           <li class="nav-item">
-            <a class="nav-link nav-products" href="index.html">
+            <a  class="nav-link active-link nav-products" href="index.html">
               <img src='img/note.png'>
               <div><i class="bi bi-box"></i></div>
             </a>
@@ -118,7 +118,7 @@
           </div>
 
           <div class="menu-item" data-target="head">
-            <p class="d-flex align-items-center gap-2"><img src="./img/record.png" alt="">Head</p>
+            <p class="d-flex align-items-center gap-2"><img src="./img/record.png" alt="">Head protection</p>
             <i class="arrow fa-solid fa-chevron-right"></i>
           </div>
           <div class="submenu " id="head">
@@ -127,7 +127,7 @@
           </div>
 
           <div class="menu-item" data-target="body">
-            <p class="d-flex align-items-center gap-2"><img src="./img/solar_t-shirt-linear.png" alt="">Body</p>
+            <p class="d-flex align-items-center gap-2"><img src="./img/solar_t-shirt-linear.png" alt="">Body protection</p>
             <i class="arrow fa-solid fa-chevron-right"></i>
           </div>
           <div class="submenu " id="body">
@@ -138,7 +138,7 @@
           </div>
 
           <div class="menu-item" data-target="feet">
-            <p class="d-flex align-items-center gap-2"><img src="./img/foot.png" alt="">Feet</p>
+            <p class="d-flex align-items-center gap-2"><img src="./img/foot.png" alt="">Feet protection</p>
             <i class="arrow fa-solid fa-chevron-right"></i>
           </div>
           <div class="submenu " id="feet">
@@ -149,7 +149,7 @@
           </div>
 
           <div class="menu-item" data-target="other">
-            <p class="d-flex align-items-center gap-2"><img src="./img/add-circle.png" alt="">Other</p>
+            <p class="d-flex align-items-center gap-2"><img src="./img/add-circle.png" alt="">Other protection</p>
             <i class="arrow fa-solid fa-chevron-right"></i>
           </div>
           <div class="submenu " id="other">
@@ -171,7 +171,7 @@
                 <div class="filter-slide">
                   <div class="category active d-flex justify-content-between align-items-center gap-2"
                     data-category="All products">
-                    <img src="img/head.png" alt="All products">
+                   <img src="./img/note.png" alt="All products">
                     <p class="m-0">All products</p>
                   </div>
                   <div class="category d-flex justify-content-between align-items-center gap-2" data-category="Head">
@@ -349,15 +349,12 @@
   </div>
 
   <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="languageModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+        
         <div class="modal-body">
           <ul class="language-options list-unstyled">
-            <li><a href="#" class="language-option" data-lang="EN"><img src="./img/en.png" alt="en"></a></li>
+            <li><a  href="#" class="language-option" data-lang="EN"><img src="./img/en.png" alt="en"></a></li>
             <li><a href="#" class="language-option" data-lang="AZ"><img src="./img/az.png" alt="az"></a></li>
             <li><a href="#" class="language-option" data-lang="RU"><img src="./img/ru.png" alt="ru"></a></li>
           </ul>
@@ -406,10 +403,10 @@
                 +994 55 914 91 61
               </a>
             </div>
-            <div class="d-flex justify-content-between align-items-center langs">
-              <div class="lang-option" data-lang="az">AZ</div>
-              <div class="lang-option" data-lang="en">EN</div>
-              <div class="lang-option" data-lang="ru">RU</div>
+            <div class="d-flex justify-content-between align-items-center gap-2 langs">
+              <div class="lang-option  justify-content-center align-items-center" data-lang="az">AZ</div>
+              <div class="lang-option justify-content-center align-items-center" data-lang="en">EN</div>
+              <div class="lang-option justify-content-center align-items-center" data-lang="ru">RU</div>
             </div>
           </div>
 
@@ -440,21 +437,7 @@
 
 
 
-    const navLinksEls = document.querySelectorAll('.nav-link');
-    const windowPathname = window.location.pathname;
 
-    navLinksEls.forEach((navLinkEl) => {
-      const navLinkPathname = new URL(navLinkEl.href).pathname;
-
-      console.log(navLinkPathname);
-
-      if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
-        navLinkEl.classList.add('active-link');
-
-      }
-    });
-
-    console.log(windowPathname);
 
 
   </script>

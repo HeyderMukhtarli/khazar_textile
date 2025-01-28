@@ -1,3 +1,4 @@
+
 fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -11,7 +12,7 @@ fetch("./data.json")
       categoryContainer.id = `${category.toLowerCase()}Catalogue`;
 
       categoryContainer.innerHTML = `
-        <div class="mb-20  d-flex justify-content-between align-items-center">
+        <div class="mb-20  d-flex title-container justify-content-between align-items-center">
           <p class="mb-0 title ">Catalogue for ${category}</p>
         </div>
         <div class="items-container d-flex flex-row flex-wrap"></div>
@@ -30,7 +31,15 @@ fetch("./data.json")
           <div  class="col-lg-6 col-xl-4  col-12  card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
-                <button class="btn tabs share"><img src="img/share.png" alt=""></button>
+<button 
+
+    class="btn tabs share" 
+    data-bs-toggle="tooltip" 
+    data-bs-placement="top" 
+    title="Share"
+    >
+    <img src="img/share.png" alt="">
+</button>
                 <ol class="carousel-indicators">
                   ${item.carouselImages
             .map(
@@ -232,7 +241,7 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-container.addEventListener('mousedown', (e) => {
+filterSlide.addEventListener('mousedown', (e) => {
   isDown = true;
   startX = e.pageX - filterSlide.offsetLeft;
   scrollLeft = filterSlide.scrollLeft;
@@ -260,8 +269,5 @@ filterSlide.addEventListener('touchmove', (e) => {
 filterSlide.addEventListener('mouseleave', () => (isDown = false));
 filterSlide.addEventListener('mouseup', () => (isDown = false));
 filterSlide.addEventListener('touchend', () => (isDown = false));
-
-
-
 
 
