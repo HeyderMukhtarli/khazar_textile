@@ -25,21 +25,14 @@ fetch("./data.json")
       document.querySelectorAll(".items-container").forEach((container) => {
         container.innerHTML = "";
       });
-
       filteredData.forEach((item) => {
         const cardHTML = `
-          <div  class="col-lg-6 col-xl-4  col-12  card-container">
+          <div class="col-lg-6 col-xl-4 col-12 card-container">
             <div class="card">
               <div id="carousel-${item.code}" class="carousel slide" data-ride="carousel">
-<button 
-
-    class="btn tabs share" 
-    data-bs-toggle="tooltip" 
-    data-bs-placement="top" 
-    title="Share"
-    >
-    <img src="img/share.png" alt="">
-</button>
+                <button class="btn tabs share" data-bs-toggle="tooltip" data-bs-placement="top" title="Copied">
+                  <img src="img/share.png" alt="Share">
+                </button>
                 <ol class="carousel-indicators">
                   ${item.carouselImages
             .map(
@@ -53,8 +46,8 @@ fetch("./data.json")
             .map(
               (image, index) =>
                 `<div class="carousel-item ${index === 0 ? "active" : ""}">
-                          <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
-                        </div>`
+                            <img class="d-block w-100 carousel-img" src="${image}" alt="Slide ${index + 1}">
+                          </div>`
             )
             .join("")}
                 </div>
@@ -77,7 +70,20 @@ fetch("./data.json")
           .querySelector(`#${item.catalogue.toLowerCase()}Catalogue .items-container`)
           .innerHTML += cardHTML;
       });
+      const tooltipElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      tooltipElements.forEach((el) => {
+        const tooltipInstance = bootstrap.Tooltip.getOrCreateInstance(el, {
+          trigger: "manual",
+        });
+        el.addEventListener("click", function () {
+          tooltipInstance.show();
+          setTimeout(() => {
+            tooltipInstance.hide();
+          }, 2000);
+        });
+      });
     };
+
 
     renderItems(data);
 

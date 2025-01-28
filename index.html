@@ -32,7 +32,7 @@
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container p-0">
       <a class="navbar-brand" href="#">
-        <img  src="./img/Khazar_logo.svg" alt="Logo">
+        <img src="./img/Khazar_logo.svg" alt="Logo">
       </a>
       <div class="navbar-mobile-icons">
         <button class="navbar-search-icon" type="button">
@@ -53,7 +53,7 @@
       <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2">
           <li class="nav-item">
-            <a  class="nav-link active-link nav-products" href="index.html">
+            <a class="nav-link active-link nav-products" href="index.html">
               <img src='img/note.png'>
               <div><i class="bi bi-box"></i></div>
             </a>
@@ -127,7 +127,8 @@
           </div>
 
           <div class="menu-item" data-target="body">
-            <p class="d-flex align-items-center gap-2"><img src="./img/solar_t-shirt-linear.png" alt="">Body protection</p>
+            <p class="d-flex align-items-center gap-2"><img src="./img/solar_t-shirt-linear.png" alt="">Body protection
+            </p>
             <i class="arrow fa-solid fa-chevron-right"></i>
           </div>
           <div class="submenu " id="body">
@@ -171,7 +172,7 @@
                 <div class="filter-slide">
                   <div class="category active d-flex justify-content-between align-items-center gap-2"
                     data-category="All products">
-                   <img src="./img/note.png" alt="All products">
+                    <img src="./img/note.png" alt="All products">
                     <p class="m-0">All products</p>
                   </div>
                   <div class="category d-flex justify-content-between align-items-center gap-2" data-category="Head">
@@ -228,7 +229,9 @@
           <div class="card-images w-md-50 w-100 d-flex flex-column gap-5 order-1 order-md-2">
             <div class="card-main-image d-flex justify-content-center">
               <img src="img/carousel.png" alt="Carousel Image">
-              <button class="btn tabs share"><img class="modal-tabs" src="img/share.png" alt=""></button>
+              <button class="btn tabs share" data-bs-toggle="tooltip" data-bs-placement="top" title="Copied">
+                <img src="img/share.png" alt="Share">
+              </button>
             </div>
             <div class="card-sub-images d-flex flex-row justify-content-between">
               <img class="card-sub-image" src="./img/carousel.png" alt="" data-src="./img/carousel.png">
@@ -285,7 +288,9 @@
           <div class="card-images w-md-50 w-100 d-flex flex-column gap-5 order-1 order-md-2">
             <div class="card-main-image d-flex justify-content-center">
               <img src="img/carousel.png" alt="Carousel Image">
-              <button class="btn tabs share"><img class="modal-tabs" src="img/share.png" alt=""></button>
+              <button class="btn tabs share" data-bs-toggle="tooltip" data-bs-placement="top" title="Copied">
+                <img src="img/share.png" alt="Share">
+              </button>          
             </div>
             <div class="card-sub-images d-flex flex-row justify-content-between">
               <img class="card-sub-image" src="./img/carousel.png" alt="" data-src="./img/carousel.png">
@@ -351,10 +356,10 @@
   <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm">
       <div class="modal-content">
-        
+
         <div class="modal-body">
           <ul class="language-options list-unstyled">
-            <li><a  href="#" class="language-option" data-lang="EN"><img src="./img/en.png" alt="en"></a></li>
+            <li><a href="#" class="language-option" data-lang="EN"><img src="./img/en.png" alt="en"></a></li>
             <li><a href="#" class="language-option" data-lang="AZ"><img src="./img/az.png" alt="az"></a></li>
             <li><a href="#" class="language-option" data-lang="RU"><img src="./img/ru.png" alt="ru"></a></li>
           </ul>
@@ -434,11 +439,6 @@
         });
       });
     });
-
-
-
-
-
 
   </script>
 </body>
